@@ -66,9 +66,9 @@ const { title, subtitle, cta, secondaryCta, image, overlay = true } = Astro.prop
     </div>
   </div>
 
-  <!-- Decorative wave -->
-  <div class="absolute bottom-0 left-0 right-0">
-    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+  <!-- Decorative wave — translate-y-px closes subpixel gap -->
+  <div class="absolute -bottom-px left-0 right-0 translate-y-px">
+    <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="block w-full">
       <path d="M0 80h1440V30c-240 30-480 50-720 30S240 0 0 30v50z" fill="var(--background)" />
     </svg>
   </div>

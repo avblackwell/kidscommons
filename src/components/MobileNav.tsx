@@ -18,7 +18,7 @@ export default function MobileNav() {
       </button>
 
       {open && (
-        <div className="fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto bg-background">
+        <div className="fixed inset-x-0 top-20 bottom-0 z-50 overflow-y-auto bg-background">
           <nav className="mx-auto max-w-7xl px-4 py-6 sm:px-6" aria-label="Mobile navigation">
             <ul className="space-y-1">
               {NAV_ITEMS.map((item) => (
