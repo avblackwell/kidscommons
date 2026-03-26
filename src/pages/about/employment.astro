@@ -1,0 +1,72 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+---
+
+<Layout title="Employment | KidsCommons">
+  <PageHeader
+    title="Employment Opportunities"
+    description="Join our team and help inspire the next generation of curious minds."
+    breadcrumbs={[
+      { label: "About", href: "/about" },
+      { label: "Employment", href: "/about/employment" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <!-- TODO: Job listings from CMS -->
+      <div class="rounded-2xl border bg-card p-8">
+        <h2 class="text-xl font-bold">Current Openings</h2>
+        <p class="mt-2 text-muted-foreground">
+          No positions are currently listed. Check back soon or submit a general application.
+        </p>
+      </div>
+
+      <div class="mt-8 rounded-2xl border bg-kc-blue/5 p-8">
+        <h2 class="text-xl font-bold">Apply to KidsCommons</h2>
+        <p class="mt-2 text-muted-foreground">
+          Interested in working at KidsCommons? Submit a general application and we'll
+          keep it on file for future openings.
+        </p>
+        <div class="mt-6">
+          <!-- TODO: Replace Google Form with on-site form -->
+          <a href="/about/contact">
+            <Button client:load size="lg">Submit Application</Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-xl font-bold">Why Work Here?</h2>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="font-semibold">Make a Difference</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Help children learn, grow, and discover through play.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="font-semibold">Creative Environment</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Work in a dynamic, hands-on museum setting.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="font-semibold">Community Impact</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Be part of a beloved Columbus institution.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <h3 class="font-semibold">Growth Opportunities</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Professional development in education and nonprofit management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

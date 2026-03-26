@@ -1,0 +1,67 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Location & Parking | KidsCommons">
+  <PageHeader
+    title="Location & Parking"
+    description="How to find us and where to park."
+    breadcrumbs={[
+      { label: "Visit", href: "/visit" },
+      { label: "Location & Parking", href: "/visit/location-parking" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold">Find Us</h2>
+        <div class="mt-6 rounded-xl border bg-card p-6">
+          <p class="text-lg font-medium">{SITE.address.street}</p>
+          <p class="text-muted-foreground">{SITE.address.city}, {SITE.address.state} {SITE.address.zip}</p>
+          <p class="mt-2">
+            <a href={`tel:${SITE.phone}`} class="text-primary hover:underline">{SITE.phone}</a>
+          </p>
+        </div>
+
+        <h2 class="mt-12 text-2xl font-bold">Parking</h2>
+        <div class="mt-6 space-y-4">
+          <div class="rounded-xl border bg-card p-6">
+            <h3 class="font-semibold">Street Parking</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Free on-street parking is available on Washington Street and surrounding streets.
+              Meters are enforced Monday through Saturday.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-6">
+            <h3 class="font-semibold">Parking Garage</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              The Jackson Street parking garage is located one block east of the museum.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-6">
+            <h3 class="font-semibold">Accessible Parking</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Accessible parking spaces are available directly in front of the museum on Washington Street.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-6">
+            <h3 class="font-semibold">Bus Loading Zone</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              A bus loading zone is available on 4th Street for school groups and large vehicles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-hidden rounded-2xl bg-muted lg:sticky lg:top-24 lg:self-start">
+        <!-- TODO: Embed Google Map -->
+        <div class="flex aspect-square items-center justify-center text-muted-foreground">
+          <p class="text-sm">Google Map Embed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

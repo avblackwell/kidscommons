@@ -1,0 +1,58 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Parties & Rentals | KidsCommons">
+  <PageHeader
+    title="Parties & Rentals"
+    description="Celebrate birthdays, host events, and create unforgettable memories at KidsCommons."
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <!-- Birthday Parties -->
+      <div class="rounded-2xl border bg-card p-8">
+        <div class="inline-flex rounded-xl bg-kc-red/10 px-3 py-1 text-sm font-semibold text-kc-red">
+          Birthday Parties
+        </div>
+        <h3 class="mt-4 text-xl font-bold">Celebrate at KidsCommons!</h3>
+        <p class="mt-2 text-muted-foreground">
+          Make your child's birthday unforgettable with a party at the museum.
+          Packages include museum admission, a private party room, and dedicated party time.
+        </p>
+        <!-- TODO: Add pricing tiers from CMS -->
+        <p class="mt-4 text-sm text-muted-foreground">
+          Contact us for current packages and pricing.
+        </p>
+        <div class="mt-6">
+          <a href="/about/contact">
+            <Button client:load>Inquire About Parties</Button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Facility Rentals -->
+      <div class="rounded-2xl border bg-card p-8">
+        <div class="inline-flex rounded-xl bg-kc-purple/10 px-3 py-1 text-sm font-semibold text-kc-purple">
+          Facility Rentals
+        </div>
+        <h3 class="mt-4 text-xl font-bold">Host Your Event</h3>
+        <p class="mt-2 text-muted-foreground">
+          Looking for a unique venue? KidsCommons offers facility rentals for corporate events,
+          meetings, and private gatherings. Enjoy exclusive after-hours access to our exhibits.
+        </p>
+        <p class="mt-4 text-sm text-muted-foreground">
+          Contact us for availability and pricing.
+        </p>
+        <div class="mt-6">
+          <a href="/about/contact">
+            <Button client:load variant="outline">Contact Us</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

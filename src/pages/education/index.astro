@@ -1,0 +1,74 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+---
+
+<Layout title="Education | KidsCommons">
+  <PageHeader
+    title="Education"
+    description="Curriculum-aligned programs that bring learning to life through hands-on exploration."
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <!-- Museum Exploration -->
+      <div class="rounded-2xl border bg-card p-8">
+        <div class="inline-flex rounded-xl bg-kc-blue/10 px-3 py-1 text-sm font-semibold text-kc-blue">
+          Field Trip
+        </div>
+        <h3 class="mt-4 text-xl font-bold">Museum Exploration</h3>
+        <p class="mt-2 text-muted-foreground">
+          Self-guided exploration of all exhibit galleries. Students discover, play, and learn
+          at their own pace with their group.
+        </p>
+        <p class="mt-4 text-2xl font-bold">$5<span class="text-sm text-muted-foreground"> / student</span></p>
+        <p class="text-sm text-muted-foreground">Minimum 20 students</p>
+      </div>
+
+      <!-- Museum Exploration + Program -->
+      <div class="rounded-2xl border bg-card p-8">
+        <div class="inline-flex rounded-xl bg-kc-blue/10 px-3 py-1 text-sm font-semibold text-kc-blue">
+          Field Trip + Program
+        </div>
+        <h3 class="mt-4 text-xl font-bold">Museum Exploration + Program</h3>
+        <p class="mt-2 text-muted-foreground">
+          Combine exhibit exploration with a curriculum-aligned, educator-led program
+          tailored to your students' grade level.
+        </p>
+        <p class="mt-4 text-2xl font-bold">$7<span class="text-sm text-muted-foreground"> / student</span></p>
+        <p class="text-sm text-muted-foreground">Minimum 20 students</p>
+      </div>
+
+      <!-- Program Outreach -->
+      <div class="rounded-2xl border bg-card p-8 lg:col-span-2">
+        <div class="inline-flex rounded-xl bg-kc-green/10 px-3 py-1 text-sm font-semibold text-kc-green">
+          We Come to You
+        </div>
+        <h3 class="mt-4 text-xl font-bold">Program Outreach</h3>
+        <p class="mt-2 text-muted-foreground">
+          Can't make it to the museum? We'll bring the learning to your classroom.
+          Our educators deliver hands-on, curriculum-aligned programs at your school.
+        </p>
+        <p class="mt-4 text-2xl font-bold">$100<span class="text-sm text-muted-foreground"> / program</span></p>
+        <p class="text-sm text-muted-foreground">Plus $0.58 per mile for travel</p>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-2xl border bg-muted/30 p-8">
+      <h3 class="text-lg font-semibold">Planning a Field Trip?</h3>
+      <p class="mt-2 text-muted-foreground">
+        A 1:5 adult-to-child ratio is required for all school visits. Contact our education coordinator
+        to book your trip.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-4">
+        <a href="mailto:brittany.snowden@kidscommons.org">
+          <Button client:load>Email Education Coordinator</Button>
+        </a>
+        <a href="/education/school-programs">
+          <Button client:load variant="outline">View School Programs</Button>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

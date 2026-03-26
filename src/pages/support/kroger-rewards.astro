@@ -1,0 +1,63 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+---
+
+<Layout title="Kroger Community Rewards | KidsCommons">
+  <PageHeader
+    title="Kroger Community Rewards"
+    description="Support KidsCommons every time you shop — at no extra cost to you."
+    breadcrumbs={[
+      { label: "Support", href: "/support/donate" },
+      { label: "Kroger Rewards", href: "/support/kroger-rewards" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-card p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">How It Works</h2>
+        <p class="mt-4 text-muted-foreground">
+          Link your Kroger Plus card to KidsCommons through the Kroger Community Rewards program.
+          Every time you shop, Kroger will donate a percentage of your purchases to us —
+          at no extra cost to you.
+        </p>
+
+        <div class="mt-8 space-y-4">
+          <div class="flex gap-4 rounded-xl bg-muted/50 p-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-kc-blue text-sm font-bold text-white">1</span>
+            <div>
+              <h3 class="font-semibold">Create a Kroger Account</h3>
+              <p class="mt-1 text-sm text-muted-foreground">
+                Visit kroger.com and sign in or create a digital account.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 rounded-xl bg-muted/50 p-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-kc-red text-sm font-bold text-white">2</span>
+            <div>
+              <h3 class="font-semibold">Link to KidsCommons</h3>
+              <p class="mt-1 text-sm text-muted-foreground">
+                Search for KidsCommons or use organization code <strong class="text-foreground">VE469</strong> in Community Rewards.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-4 rounded-xl bg-muted/50 p-4">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-kc-green text-sm font-bold text-white">3</span>
+            <div>
+              <h3 class="font-semibold">Shop as Usual</h3>
+              <p class="mt-1 text-sm text-muted-foreground">
+                That's it! Kroger will automatically donate to KidsCommons based on your purchases.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-xl bg-kc-blue/5 p-4 text-center">
+          <p class="text-sm font-medium">Organization Code</p>
+          <p class="mt-1 text-3xl font-bold text-kc-blue">VE469</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

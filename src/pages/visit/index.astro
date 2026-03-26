@@ -1,0 +1,48 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import InfoCard from "@/components/InfoCard.astro"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Plan Your Visit | KidsCommons">
+  <PageHeader
+    title="Plan Your Visit"
+    description="Everything you need to know before your trip to KidsCommons."
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <InfoCard
+        title="Hours & Admission"
+        description="See our hours, session times, and admission pricing."
+        href="/visit/hours-admission"
+        color="blue"
+      />
+      <InfoCard
+        title="Exhibits"
+        description="Explore our five hands-on exhibit galleries."
+        href="/visit/exhibits"
+        color="blue"
+      />
+      <InfoCard
+        title="Session Tickets"
+        description="Purchase timed-entry tickets for your visit."
+        href="/visit/tickets"
+        color="green"
+      />
+      <InfoCard
+        title="Location & Parking"
+        description="Directions, parking options, and accessibility info."
+        href="/visit/location-parking"
+        color="purple"
+      />
+      <InfoCard
+        title="Museums for All"
+        description="Reduced admission for SNAP/EBT cardholders."
+        href="/visit/museums-for-all"
+        color="red"
+      />
+    </div>
+  </section>
+</Layout>

@@ -1,17 +1,161 @@
 ---
 import Layout from "@/layouts/main.astro"
+import Hero from "@/components/Hero.astro"
+import InfoCard from "@/components/InfoCard.astro"
+import ExhibitCard from "@/components/ExhibitCard.astro"
 import { Button } from "@/components/ui/button"
+import { SITE, EXHIBITS } from "@/lib/constants"
 ---
 
 <Layout>
-  <div class="flex min-h-svh p-6">
-    <div class="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
+  <Hero
+    title="Where Curiosity Comes to Play"
+    subtitle="kidscommons is Columbus, Indiana's children's museum — a place where kids explore, create, and discover through hands-on exhibits and programs."
+    cta={{ label: "Get Tickets", href: SITE.ticketsUrl }}
+    secondaryCta={{ label: "Plan Your Visit", href: "/visit" }}
+  />
+
+  <!-- Quick Actions — circle-themed cards echoing the brand motif -->
+  <section class="mx-auto -mt-8 max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <InfoCard
+        title="Visit Us"
+        description="Plan your trip with hours, admission, and parking info."
+        href="/visit"
+        color="red"
+      />
+      <InfoCard
+        title="Become a Member"
+        description="Unlimited visits, guest passes, and exclusive member events."
+        href="/memberships"
+        color="blue"
+      />
+      <InfoCard
+        title="Summer Camps"
+        description="Week-long adventure camps for ages 4-12. Register now!"
+        href="/summer-camps"
+        color="green"
+      />
+      <InfoCard
+        title="Support Us"
+        description="Help us inspire the next generation. Every gift matters."
+        href="/support/donate"
+        color="purple"
+      />
+    </div>
+  </section>
+
+  <!-- Exhibits Preview -->
+  <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+    <div class="flex items-end justify-between">
       <div>
-        <h1 class="font-medium">Project ready!</h1>
-        <p>You may now add components and start building.</p>
-        <p>We've already added the button component for you.</p>
-        <Button client:load className="mt-2">Button</Button>
+        <h2 class="text-3xl font-extrabold">Our Exhibits</h2>
+        <p class="mt-2 text-muted-foreground">Five floors of hands-on fun and discovery.</p>
+      </div>
+      <a href="/visit/exhibits" class="hidden sm:block">
+        <Button client:load variant="outline" className="rounded-full">View All Exhibits</Button>
+      </a>
+    </div>
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {EXHIBITS.slice(0, 3).map((exhibit) => (
+        <ExhibitCard
+          name={exhibit.name}
+          description={exhibit.description}
+          image={exhibit.image}
+        />
+      ))}
+    </div>
+    <div class="mt-8 text-center sm:hidden">
+      <a href="/visit/exhibits">
+        <Button client:load variant="outline" className="rounded-full">View All Exhibits</Button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Museums for All -->
+  <section class="bg-kc-green-light">
+    <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <div class="mx-auto mb-6 flex size-16 items-center justify-center rounded-full bg-kc-green/10">
+          <div class="size-6 rounded-full bg-kc-green" />
+        </div>
+        <h2 class="text-3xl font-extrabold">Museums for All</h2>
+        <p class="mt-4 text-lg text-muted-foreground">
+          We believe every child deserves access to play and learning. Through the Museums for All
+          program, SNAP/EBT cardholders receive admission for just $3 per person (up to 4 family members).
+        </p>
+        <div class="mt-8">
+          <a href="/visit/museums-for-all">
+            <Button client:load variant="outline" size="lg" className="rounded-full">Learn More</Button>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Education CTA -->
+  <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl bg-kc-purple p-8 sm:p-12 lg:p-16">
+      <!-- Decorative circles -->
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div class="absolute -top-8 -right-8 size-40 rounded-full bg-kc-blue/20" />
+        <div class="absolute -bottom-4 -left-4 size-24 rounded-full bg-kc-green/15" />
+        <div class="absolute top-1/2 right-1/4 size-10 rounded-full bg-white/10" />
+      </div>
+      <div class="relative max-w-2xl">
+        <h2 class="text-3xl font-extrabold text-white">Bring Your Class to kidscommons</h2>
+        <p class="mt-4 text-lg text-white/80">
+          Field trips, outreach programs, and curriculum-aligned experiences for Pre-K through 5th grade.
+          Starting at just $5 per student.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/education">
+            <Button client:load size="lg" className="rounded-full bg-white text-kc-purple hover:bg-white/90 font-bold">
+              Explore Programs
+            </Button>
+          </a>
+          <a href="/education/school-programs">
+            <Button client:load size="lg" variant="outline" className="rounded-full border-white/30 text-white hover:bg-white/10 hover:text-white font-bold">
+              School Programs
+            </Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours + Location -->
+  <section class="border-t bg-muted/30">
+    <div class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-3xl font-extrabold">Visit Us</h2>
+          <p class="mt-2 text-muted-foreground">columbus' community children's museum</p>
+          <div class="mt-8 space-y-4">
+            {SITE.hours.map((schedule) => (
+              <div class="flex items-center justify-between rounded-2xl border bg-card p-4">
+                <span class="font-semibold">{schedule.days}</span>
+                <span class="text-muted-foreground">{schedule.time}</span>
+              </div>
+            ))}
+          </div>
+          <div class="mt-8 space-y-2 text-muted-foreground">
+            <p>{SITE.address.street}</p>
+            <p>{SITE.address.city}, {SITE.address.state} {SITE.address.zip}</p>
+            <p>
+              <a href={`tel:${SITE.phone}`} class="font-semibold text-kc-red hover:underline">
+                {SITE.phone}
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-2xl bg-muted">
+          <!-- TODO: Embed Google Map -->
+          <div class="flex aspect-[4/3] items-center justify-center text-muted-foreground">
+            <p class="text-sm">Google Map Embed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>

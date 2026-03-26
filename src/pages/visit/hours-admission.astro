@@ -1,0 +1,65 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Hours & Admission | KidsCommons">
+  <PageHeader
+    title="Hours & Admission"
+    description="Plan your visit to KidsCommons."
+    breadcrumbs={[
+      { label: "Visit", href: "/visit" },
+      { label: "Hours & Admission", href: "/visit/hours-admission" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2">
+      <!-- Hours -->
+      <div>
+        <h2 class="text-2xl font-bold">Museum Hours</h2>
+        <div class="mt-6 space-y-3">
+          {SITE.hours.map((schedule) => (
+            <div class="flex items-center justify-between rounded-xl border bg-card p-4">
+              <span class="font-medium">{schedule.days}</span>
+              <span class="text-muted-foreground">{schedule.time}</span>
+            </div>
+          ))}
+        </div>
+        <p class="mt-4 text-sm text-muted-foreground">
+          The museum closes between 1:00 PM and 2:00 PM daily for cleaning and sanitization.
+        </p>
+      </div>
+
+      <!-- Admission -->
+      <div>
+        <h2 class="text-2xl font-bold">Admission</h2>
+        <div class="mt-6 space-y-4">
+          <div class="rounded-xl border bg-card p-6">
+            <p class="text-muted-foreground">
+              Admission pricing and session tickets are available through our online shop.
+              All purchases are non-refundable.
+            </p>
+            <div class="mt-6">
+              <a href={SITE.ticketsUrl} target="_blank" rel="noopener noreferrer">
+                <Button client:load size="lg">Purchase Tickets</Button>
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-xl border bg-kc-blue/5 p-6">
+            <h3 class="font-semibold">Good to Know</h3>
+            <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+              <li>Children must be accompanied by an adult at all times.</li>
+              <li>Adults without children cannot purchase general admission.</li>
+              <li>All purchases are non-refundable.</li>
+              <li>Members enter free — <a href="/memberships" class="text-primary underline">learn about memberships</a>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

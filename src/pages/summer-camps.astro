@@ -1,0 +1,66 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Summer Camps | KidsCommons">
+  <PageHeader
+    title="Summer Camps"
+    description="Week-long adventure camps for curious kids. New themes every week!"
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- TODO: Camp listings will come from CMS (seasonal content) -->
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-gradient-to-br from-kc-red-light to-kc-blue-light p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">Camp registration coming soon!</h2>
+        <p class="mt-4 text-muted-foreground">
+          Our summer camps run weekly throughout June and July, with themed adventures
+          for ages 4-12. Check back soon for this year's schedule and registration.
+        </p>
+        <div class="mt-8">
+          <a href={SITE.shopUrl} target="_blank" rel="noopener noreferrer">
+            <Button client:load size="lg">Check Registration</Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold">Camp Policies</h2>
+        <div class="mt-6 space-y-3">
+          <div class="rounded-xl border bg-card p-4">
+            <p class="text-sm text-muted-foreground">
+              <strong class="text-foreground">Food:</strong> Campers must bring their own lunch and snacks. No food is provided.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <p class="text-sm text-muted-foreground">
+              <strong class="text-foreground">Refunds:</strong> Camp fees are non-refundable.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <p class="text-sm text-muted-foreground">
+              <strong class="text-foreground">What to bring:</strong> A reusable water bottle is recommended.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-4">
+            <p class="text-sm text-muted-foreground">
+              <strong class="text-foreground">Restrooms:</strong> Campers must be able to use the restroom independently.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-2xl border bg-kc-purple/5 p-8">
+        <h3 class="text-lg font-semibold">Camp Scholarships</h3>
+        <p class="mt-2 text-muted-foreground">
+          KidsCommons offers camp scholarships for families who need financial assistance.
+          Scholarships are funded by generous donors.{" "}
+          <a href="/support/donate" class="text-primary underline">Support our scholarship fund</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

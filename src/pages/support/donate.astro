@@ -1,0 +1,71 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Donate | KidsCommons">
+  <PageHeader
+    title="Support KidsCommons"
+    description="Your generosity helps us inspire children and strengthen our community."
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-gradient-to-br from-kc-purple/5 to-kc-blue/5 p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">Every Gift Makes a Difference</h2>
+        <p class="mt-4 text-muted-foreground">
+          KidsCommons receives no government funding. We rely entirely on admissions, memberships,
+          and the generous support of donors like you to keep our doors open and our programs running.
+        </p>
+        <div class="mt-8">
+          <a href={SITE.donateUrl} target="_blank" rel="noopener noreferrer">
+            <Button client:load size="lg" className="px-8">Donate Now</Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold">Designated Giving</h2>
+        <p class="mt-4 text-muted-foreground">
+          Want your gift to support a specific area? You can designate your donation to:
+        </p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-xl border bg-card p-6 text-center">
+            <div class="text-2xl">🏕️</div>
+            <h3 class="mt-2 font-semibold">Camp Scholarships</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Help a child attend summer camp who otherwise couldn't.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-6 text-center">
+            <div class="text-2xl">🎨</div>
+            <h3 class="mt-2 font-semibold">Exhibits</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Fund new and improved exhibit experiences.
+            </p>
+          </div>
+          <div class="rounded-xl border bg-card p-6 text-center">
+            <div class="text-2xl">📚</div>
+            <h3 class="mt-2 font-semibold">Education Fund</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Support school programs and educational outreach.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-2xl border bg-card p-8">
+        <h2 class="text-xl font-bold">Questions About Giving?</h2>
+        <p class="mt-2 text-muted-foreground">
+          Contact Whitney Hartwell, Executive Director, at{" "}
+          <a href="mailto:whitney.hartwell@kidscommons.org" class="text-primary hover:underline">
+            whitney.hartwell@kidscommons.org
+          </a>{" "}
+          or call <a href={`tel:${SITE.phone}`} class="text-primary hover:underline">{SITE.phone}</a> ext. 125.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

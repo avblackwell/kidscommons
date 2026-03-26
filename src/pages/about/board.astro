@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+---
+
+<Layout title="Board of Directors | KidsCommons">
+  <PageHeader
+    title="Board of Directors"
+    description="Our volunteer board provides governance and strategic direction."
+    breadcrumbs={[
+      { label: "About", href: "/about" },
+      { label: "Board of Directors", href: "/about/board" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- TODO: Board members from CMS (currently trapped in images on old site) -->
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-card p-8">
+        <h2 class="text-xl font-bold">Current Board Members</h2>
+        <p class="mt-2 text-sm text-muted-foreground">Board member details coming soon.</p>
+        <!-- TODO: Grid of board members with names and titles -->
+      </div>
+
+      <div class="mt-8 rounded-2xl border bg-card p-8">
+        <h2 class="text-xl font-bold">Directors Emeritus</h2>
+        <ul class="mt-4 grid gap-2 text-muted-foreground sm:grid-cols-2">
+          <li>Director Name</li>
+          <li>Director Name</li>
+          <li>Director Name</li>
+          <li>Director Name</li>
+          <li>Director Name</li>
+          <li>Director Name</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+---
+
+<Layout title="Mission & History | KidsCommons">
+  <PageHeader
+    title="Mission & History"
+    description="Nurturing exploration, collaboration, and creativity since 2005."
+    breadcrumbs={[
+      { label: "About", href: "/about" },
+      { label: "Mission & History", href: "/about/mission-history" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <!-- Mission -->
+      <div class="rounded-2xl border bg-kc-blue/5 p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">Our Mission</h2>
+        <p class="mt-4 text-lg text-muted-foreground">
+          KidsCommons is a fun, safe, and inviting place that nurtures exploration,
+          collaboration, and creativity within all children and their caregivers.
+        </p>
+      </div>
+
+      <!-- Values -->
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold">Our Values</h2>
+        <p class="mt-4 text-muted-foreground">
+          KidsCommons is committed to Diversity, Equity, Inclusion, Accessibility,
+          Belonging, and Justice (DEIABJ) in all that we do — from our exhibits and
+          programs to our hiring practices and community engagement.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold">Our History</h2>
+        <div class="mt-8 space-y-8 border-l-2 border-kc-blue/20 pl-8">
+          <div class="relative">
+            <div class="absolute -left-10 flex size-4 items-center justify-center rounded-full bg-kc-blue" />
+            <h3 class="font-semibold">Late 1990s</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              The idea for a children's museum in Columbus begins to take shape among
+              community leaders and parents.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 flex size-4 items-center justify-center rounded-full bg-kc-red" />
+            <h3 class="font-semibold">1998</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              A pilot museum opens at The Commons Centre, testing the concept and
+              building community support.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 flex size-4 items-center justify-center rounded-full bg-kc-green" />
+            <h3 class="font-semibold">October 1, 2005</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              KidsCommons opens its doors at 309 Washington Street in a renovated
+              former J.C. Penney building, featuring multiple floors of interactive exhibits.
+            </p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-10 flex size-4 items-center justify-center rounded-full bg-kc-purple" />
+            <h3 class="font-semibold">Today</h3>
+            <p class="mt-1 text-sm text-muted-foreground">
+              KidsCommons serves thousands of children and families each year through
+              exhibits, education programs, summer camps, and community events.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

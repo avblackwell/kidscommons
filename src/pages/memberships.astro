@@ -1,0 +1,96 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+import { SITE } from "@/lib/constants"
+---
+
+<Layout title="Memberships | KidsCommons">
+  <PageHeader
+    title="Memberships"
+    description="Unlimited visits, exclusive perks, and more. Join the KidsCommons family."
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- TODO: Replace with actual membership tiers from CMS/Versai -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-2xl border bg-card p-8">
+        <h3 class="text-lg font-semibold text-kc-blue">Family</h3>
+        <p class="mt-1 text-sm text-muted-foreground">Perfect for families with young children.</p>
+        <div class="mt-6">
+          <p class="text-sm text-muted-foreground">Starting at</p>
+          <p class="text-4xl font-bold">$XX<span class="text-lg text-muted-foreground">/yr</span></p>
+        </div>
+        <ul class="mt-6 space-y-2 text-sm text-muted-foreground">
+          <li>Unlimited museum visits</li>
+          <li>Guest passes</li>
+          <li>Member-only events</li>
+          <li>Gift shop discounts</li>
+        </ul>
+        <div class="mt-8">
+          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
+            <Button client:load className="w-full">Join Now</Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border-2 border-kc-red bg-card p-8 shadow-lg">
+        <div class="mb-4 inline-block rounded-full bg-kc-red/10 px-3 py-1 text-xs font-semibold text-kc-red">Most Popular</div>
+        <h3 class="text-lg font-semibold text-kc-red">Family Plus</h3>
+        <p class="mt-1 text-sm text-muted-foreground">For families who love to share the fun.</p>
+        <div class="mt-6">
+          <p class="text-sm text-muted-foreground">Starting at</p>
+          <p class="text-4xl font-bold">$XX<span class="text-lg text-muted-foreground">/yr</span></p>
+        </div>
+        <ul class="mt-6 space-y-2 text-sm text-muted-foreground">
+          <li>Everything in Family</li>
+          <li>Additional guest passes</li>
+          <li>Camp & program discounts</li>
+          <li>Reciprocal museum benefits</li>
+        </ul>
+        <div class="mt-8">
+          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
+            <Button client:load variant="secondary" className="w-full">Join Now</Button>
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-8">
+        <h3 class="text-lg font-semibold text-kc-purple">Grandparent</h3>
+        <p class="mt-1 text-sm text-muted-foreground">Share the magic with your grandchildren.</p>
+        <div class="mt-6">
+          <p class="text-sm text-muted-foreground">Starting at</p>
+          <p class="text-4xl font-bold">$XX<span class="text-lg text-muted-foreground">/yr</span></p>
+        </div>
+        <ul class="mt-6 space-y-2 text-sm text-muted-foreground">
+          <li>Unlimited visits with grandchildren</li>
+          <li>Guest passes</li>
+          <li>Member-only events</li>
+          <li>Gift shop discounts</li>
+        </ul>
+        <div class="mt-8">
+          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
+            <Button client:load className="w-full">Join Now</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 rounded-2xl border bg-muted/30 p-8 text-center">
+      <h3 class="text-lg font-semibold">Prefer Monthly Payments?</h3>
+      <p class="mt-2 text-muted-foreground">
+        Monthly payment plans are available by phone. Call us at{" "}
+        <a href={`tel:${SITE.phone}`} class="font-medium text-primary hover:underline">{SITE.phone}</a> to set one up.
+      </p>
+    </div>
+
+    <div class="mt-8 text-sm text-muted-foreground">
+      <h3 class="font-semibold text-foreground">Membership Policies</h3>
+      <ul class="mt-2 list-inside list-disc space-y-1">
+        <li>Memberships are non-transferable and non-refundable.</li>
+        <li>Memberships are not valid for field trips or birthday parties.</li>
+        <li>Valid photo ID may be required at check-in.</li>
+      </ul>
+    </div>
+  </section>
+</Layout>

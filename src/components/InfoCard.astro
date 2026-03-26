@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string
+  description: string
+  href?: string
+  color?: "red" | "blue" | "purple" | "green"
+}
+
+const { title, description, href, color = "red" } = Astro.props
+
+const colorMap = {
+  red: { bg: "bg-kc-red-light", text: "text-kc-red", dot: "bg-kc-red" },
+  blue: { bg: "bg-kc-blue-light", text: "text-kc-blue", dot: "bg-kc-blue" },
+  purple: { bg: "bg-kc-purple-light", text: "text-kc-purple", dot: "bg-kc-purple" },
+  green: { bg: "bg-kc-green-light", text: "text-kc-green", dot: "bg-kc-green" },
+}
+
+const c = colorMap[color]
+const Tag = href ? "a" : "div"
+---
+
+<Tag
+  href={href}
+  class:list={[
+    "group block rounded-2xl border bg-card p-6 transition-all",
+    href && "hover:shadow-lg hover:border-transparent hover:ring-2 hover:ring-current",
+    href && c.text,
+  ]}
+>
+  <!-- Circle icon — echoing the logo dot motif -->
+  <div class:list={["inline-flex size-12 items-center justify-center rounded-full", c.bg]}>
+    <div class:list={["size-4 rounded-full", c.dot]} />
+  </div>
+  <h3 class="mt-4 text-lg font-bold">{title}</h3>
+  <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+</Tag>

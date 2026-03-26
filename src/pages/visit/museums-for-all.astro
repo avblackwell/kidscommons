@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import { Button } from "@/components/ui/button"
+---
+
+<Layout title="Museums for All | KidsCommons">
+  <PageHeader
+    title="Museums for All"
+    description="Making KidsCommons accessible to every family."
+    breadcrumbs={[
+      { label: "Visit", href: "/visit" },
+      { label: "Museums for All", href: "/visit/museums-for-all" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-kc-green/5 p-8 sm:p-12">
+        <h2 class="text-2xl font-bold">$3 Admission for SNAP/EBT Cardholders</h2>
+        <p class="mt-4 text-muted-foreground">
+          Through the national Museums for All initiative, KidsCommons offers reduced admission
+          of just <strong class="text-foreground">$3 per person</strong> for up to 4 family members
+          when presenting a valid SNAP/EBT card at the front desk.
+        </p>
+
+        <h3 class="mt-8 text-lg font-semibold">How It Works</h3>
+        <ol class="mt-4 space-y-3 text-muted-foreground">
+          <li class="flex gap-3">
+            <span class="flex size-6 shrink-0 items-center justify-center rounded-full bg-kc-green text-xs font-bold text-white">1</span>
+            <span>Present your SNAP/EBT card and a valid photo ID at the front desk.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex size-6 shrink-0 items-center justify-center rounded-full bg-kc-green text-xs font-bold text-white">2</span>
+            <span>Receive admission for up to 4 family members at $3 each.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex size-6 shrink-0 items-center justify-center rounded-full bg-kc-green text-xs font-bold text-white">3</span>
+            <span>Enjoy the museum!</span>
+          </li>
+        </ol>
+
+        <div class="mt-8">
+          <a href="/visit/hours-admission">
+            <Button client:load size="lg">Plan Your Visit</Button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

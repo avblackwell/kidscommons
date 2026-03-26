@@ -1,0 +1,29 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import ExhibitCard from "@/components/ExhibitCard.astro"
+import { EXHIBITS } from "@/lib/constants"
+---
+
+<Layout title="Exhibits | KidsCommons">
+  <PageHeader
+    title="Exhibit Galleries"
+    description="Five floors of hands-on exhibits designed to spark curiosity and creativity."
+    breadcrumbs={[
+      { label: "Visit", href: "/visit" },
+      { label: "Exhibits", href: "/visit/exhibits" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {EXHIBITS.map((exhibit) => (
+        <ExhibitCard
+          name={exhibit.name}
+          description={exhibit.description}
+          image={exhibit.image}
+        />
+      ))}
+    </div>
+  </section>
+</Layout>

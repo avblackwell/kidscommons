@@ -1,15 +1,39 @@
 ---
 import "@/styles/global.css"
+import Header from "@/components/Header.astro"
+import Footer from "@/components/Footer.astro"
+
+interface Props {
+  title?: string
+  description?: string
+}
+
+const {
+  title = "KidsCommons | Columbus Indiana Children's Museum",
+  description = "A fun, safe, and inviting place that nurtures exploration, collaboration, and creativity within all children and their caregivers.",
+} = Astro.props
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro App</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
   </head>
-  <body>
-    <slot />
+  <body class="flex min-h-dvh flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
