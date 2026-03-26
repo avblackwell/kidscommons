@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 ---
 
 <Layout title="Museums for All | KidsCommons">
@@ -41,9 +41,7 @@ import { Button } from "@/components/ui/button"
         </ol>
 
         <div class="mt-8">
-          <a href="/visit/hours-admission">
-            <Button client:load size="lg">Plan Your Visit</Button>
-          </a>
+          <LinkButton href="/visit/hours-admission" size="lg">Plan Your Visit</LinkButton>
         </div>
       </div>
     </div>

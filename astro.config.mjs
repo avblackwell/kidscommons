@@ -4,14 +4,17 @@ import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "astro/config"
 import react from "@astrojs/react"
 import sanity from "@sanity/astro"
+import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.kidscommons.org",
   output: "static",
   vite: {
     plugins: [tailwindcss()],
   },
   integrations: [
+    sitemap(),
     react(),
     sanity({
       projectId: process.env.PUBLIC_SANITY_PROJECT_ID || "your-project-id",

@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE } from "@/lib/constants"
 ---
 
@@ -21,9 +21,7 @@ import { SITE } from "@/lib/constants"
           for ages 4-12. Check back soon for this year's schedule and registration.
         </p>
         <div class="mt-8">
-          <a href={SITE.shopUrl} target="_blank" rel="noopener noreferrer">
-            <Button client:load size="lg">Check Registration</Button>
-          </a>
+          <LinkButton href={SITE.shopUrl} size="lg" target="_blank" rel="noopener noreferrer">Check Registration</LinkButton>
         </div>
       </div>
 

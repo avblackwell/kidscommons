@@ -3,13 +3,27 @@ interface Props {
   title: string
   description?: string
   breadcrumbs?: { label: string; href: string }[]
+  color?: "red" | "blue" | "purple" | "green"
 }
 
-const { title, description, breadcrumbs } = Astro.props
+const { title, description, breadcrumbs, color = "red" } = Astro.props
+
+const dotColors: Record<string, string> = {
+  red: "bg-kc-red/8",
+  blue: "bg-kc-blue/8",
+  purple: "bg-kc-purple/8",
+  green: "bg-kc-green/8",
+}
 ---
 
-<section class="border-b bg-muted/30">
-  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+<section class="relative overflow-hidden border-b bg-muted/30">
+  <!-- Decorative circles — subtle, matching the brand motif -->
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class:list={["absolute -top-10 -right-10 size-40 rounded-full", dotColors[color]]} />
+    <div class:list={["absolute -bottom-6 left-1/4 size-20 rounded-full", dotColors[color]]} />
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
     {breadcrumbs && breadcrumbs.length > 0 && (
       <nav aria-label="Breadcrumb" class="mb-4">
         <ol class="flex items-center gap-1.5 text-sm text-muted-foreground">
@@ -31,7 +45,7 @@ const { title, description, breadcrumbs } = Astro.props
         </ol>
       </nav>
     )}
-    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
+    <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h1>
     {description && (
       <p class="mt-4 max-w-2xl text-lg text-muted-foreground">{description}</p>
     )}

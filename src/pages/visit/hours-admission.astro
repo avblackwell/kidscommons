@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE } from "@/lib/constants"
 ---
 
@@ -43,9 +43,7 @@ import { SITE } from "@/lib/constants"
               All purchases are non-refundable.
             </p>
             <div class="mt-6">
-              <a href={SITE.ticketsUrl} target="_blank" rel="noopener noreferrer">
-                <Button client:load size="lg">Purchase Tickets</Button>
-              </a>
+              <LinkButton href={SITE.ticketsUrl} size="lg" target="_blank" rel="noopener noreferrer">Purchase Tickets</LinkButton>
             </div>
           </div>
 

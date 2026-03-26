@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE } from "@/lib/constants"
 ---
 
@@ -28,9 +28,7 @@ import { SITE } from "@/lib/constants"
           Contact us for current packages and pricing.
         </p>
         <div class="mt-6">
-          <a href="/about/contact">
-            <Button client:load>Inquire About Parties</Button>
-          </a>
+          <LinkButton href="/about/contact">Inquire About Parties</LinkButton>
         </div>
       </div>
 
@@ -48,9 +46,7 @@ import { SITE } from "@/lib/constants"
           Contact us for availability and pricing.
         </p>
         <div class="mt-6">
-          <a href="/about/contact">
-            <Button client:load variant="outline">Contact Us</Button>
-          </a>
+          <LinkButton href="/about/contact" variant="outline">Contact Us</LinkButton>
         </div>
       </div>
     </div>

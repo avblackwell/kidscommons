@@ -12,6 +12,8 @@ const {
   title = "KidsCommons | Columbus Indiana Children's Museum",
   description = "A fun, safe, and inviting place that nurtures exploration, collaboration, and creativity within all children and their caregivers.",
 } = Astro.props
+
+const canonicalUrl = new URL(Astro.url.pathname, "https://www.kidscommons.org")
 ---
 
 <html lang="en">
@@ -19,7 +21,9 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="preconnect" href="https://shop.kidscommons.org" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -28,10 +32,25 @@ const {
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:image" content="https://www.kidscommons.org/images/og-image.jpg" />
+    <meta property="og:site_name" content="KidsCommons" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://www.kidscommons.org/images/og-image.jpg" />
   </head>
   <body class="flex min-h-dvh flex-col">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:outline-none"
+    >
+      Skip to main content
+    </a>
     <Header />
-    <main class="flex-1">
+    <main id="main-content" class="flex-1">
       <slot />
     </main>
     <Footer />

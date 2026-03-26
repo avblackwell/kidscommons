@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 ---
 
 <Layout title="Volunteer | KidsCommons">
@@ -60,9 +60,7 @@ import { Button } from "@/components/ui/button"
 
       <div class="mt-12 flex flex-wrap gap-4">
         <!-- TODO: Replace with on-site form -->
-        <a href="/about/contact">
-          <Button client:load size="lg">Apply to Volunteer</Button>
-        </a>
+        <LinkButton href="/about/contact" size="lg">Apply to Volunteer</LinkButton>
       </div>
     </div>
   </section>

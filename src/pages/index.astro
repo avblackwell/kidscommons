@@ -3,7 +3,7 @@ import Layout from "@/layouts/main.astro"
 import Hero from "@/components/Hero.astro"
 import InfoCard from "@/components/InfoCard.astro"
 import ExhibitCard from "@/components/ExhibitCard.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE, EXHIBITS } from "@/lib/constants"
 ---
 
@@ -52,9 +52,7 @@ import { SITE, EXHIBITS } from "@/lib/constants"
         <h2 class="text-3xl font-extrabold">Our Exhibits</h2>
         <p class="mt-2 text-muted-foreground">Five floors of hands-on fun and discovery.</p>
       </div>
-      <a href="/visit/exhibits" class="hidden sm:block">
-        <Button client:load variant="outline" className="rounded-full">View All Exhibits</Button>
-      </a>
+      <LinkButton href="/visit/exhibits" variant="outline" class="hidden sm:block">View All Exhibits</LinkButton>
     </div>
     <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {EXHIBITS.slice(0, 3).map((exhibit) => (
@@ -66,9 +64,7 @@ import { SITE, EXHIBITS } from "@/lib/constants"
       ))}
     </div>
     <div class="mt-8 text-center sm:hidden">
-      <a href="/visit/exhibits">
-        <Button client:load variant="outline" className="rounded-full">View All Exhibits</Button>
-      </a>
+      <LinkButton href="/visit/exhibits" variant="outline">View All Exhibits</LinkButton>
     </div>
   </section>
 
@@ -85,9 +81,7 @@ import { SITE, EXHIBITS } from "@/lib/constants"
           program, SNAP/EBT cardholders receive admission for just $3 per person (up to 4 family members).
         </p>
         <div class="mt-8">
-          <a href="/visit/museums-for-all">
-            <Button client:load variant="outline" size="lg" className="rounded-full">Learn More</Button>
-          </a>
+          <LinkButton href="/visit/museums-for-all" variant="outline" size="lg">Learn More</LinkButton>
         </div>
       </div>
     </div>
@@ -109,16 +103,12 @@ import { SITE, EXHIBITS } from "@/lib/constants"
           Starting at just $5 per student.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/education">
-            <Button client:load size="lg" className="rounded-full bg-white text-kc-purple hover:bg-white/90 font-bold">
-              Explore Programs
-            </Button>
-          </a>
-          <a href="/education/school-programs">
-            <Button client:load size="lg" variant="outline" className="rounded-full border-white/30 text-white hover:bg-white/10 hover:text-white font-bold">
-              School Programs
-            </Button>
-          </a>
+          <LinkButton href="/education" size="lg" class="bg-white text-kc-purple hover:bg-white/90">
+            Explore Programs
+          </LinkButton>
+          <LinkButton href="/education/school-programs" size="lg" variant="outline" class="border-white/30 text-white hover:bg-white/10 hover:text-white">
+            School Programs
+          </LinkButton>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { NAV_ITEMS, SITE } from "@/lib/constants"
 import { Button } from "@/components/ui/button"
@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button"
 export default function MobileNav() {
   const [open, setOpen] = useState(false)
   const [expanded, setExpanded] = useState<string | null>(null)
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false)
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown)
+    return () => document.removeEventListener("keydown", handleKeyDown)
+  }, [])
 
   return (
     <>
@@ -69,7 +79,7 @@ export default function MobileNav() {
 
             <div className="mt-8 border-t pt-6">
               <a href={SITE.ticketsUrl} target="_blank" rel="noopener noreferrer" className="block">
-                <Button className="w-full" size="lg">
+                <Button className="w-full rounded-full bg-kc-red hover:bg-kc-red/85 text-white" size="lg">
                   Get Tickets
                 </Button>
               </a>

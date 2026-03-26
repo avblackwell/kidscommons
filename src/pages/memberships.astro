@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE } from "@/lib/constants"
 ---
 
@@ -28,9 +28,7 @@ import { SITE } from "@/lib/constants"
           <li>Gift shop discounts</li>
         </ul>
         <div class="mt-8">
-          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
-            <Button client:load className="w-full">Join Now</Button>
-          </a>
+          <LinkButton href={SITE.membershipUrl} class="w-full" target="_blank" rel="noopener noreferrer">Join Now</LinkButton>
         </div>
       </div>
 
@@ -49,9 +47,7 @@ import { SITE } from "@/lib/constants"
           <li>Reciprocal museum benefits</li>
         </ul>
         <div class="mt-8">
-          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
-            <Button client:load variant="secondary" className="w-full">Join Now</Button>
-          </a>
+          <LinkButton href={SITE.membershipUrl} variant="secondary" class="w-full" target="_blank" rel="noopener noreferrer">Join Now</LinkButton>
         </div>
       </div>
 
@@ -69,9 +65,7 @@ import { SITE } from "@/lib/constants"
           <li>Gift shop discounts</li>
         </ul>
         <div class="mt-8">
-          <a href={SITE.membershipUrl} target="_blank" rel="noopener noreferrer">
-            <Button client:load className="w-full">Join Now</Button>
-          </a>
+          <LinkButton href={SITE.membershipUrl} class="w-full" target="_blank" rel="noopener noreferrer">Join Now</LinkButton>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 import { SITE } from "@/lib/constants"
 ---
 
@@ -24,11 +24,9 @@ import { SITE } from "@/lib/constants"
           Select your preferred date and session time through our online ticketing system.
         </p>
         <div class="mt-8">
-          <a href={SITE.ticketsUrl} target="_blank" rel="noopener noreferrer">
-            <Button client:load size="lg" className="px-8">
-              View Available Sessions
-            </Button>
-          </a>
+          <LinkButton href={SITE.ticketsUrl} size="lg" target="_blank" rel="noopener noreferrer">
+            View Available Sessions
+          </LinkButton>
         </div>
         <p class="mt-6 text-sm text-muted-foreground">
           Members don't need tickets — just check in at the front desk.

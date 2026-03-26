@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/main.astro"
 import PageHeader from "@/components/PageHeader.astro"
-import { Button } from "@/components/ui/button"
+import LinkButton from "@/components/LinkButton.astro"
 ---
 
 <Layout title="Education | KidsCommons">
@@ -62,12 +62,8 @@ import { Button } from "@/components/ui/button"
         to book your trip.
       </p>
       <div class="mt-6 flex flex-wrap items-center gap-4">
-        <a href="mailto:brittany.snowden@kidscommons.org">
-          <Button client:load>Email Education Coordinator</Button>
-        </a>
-        <a href="/education/school-programs">
-          <Button client:load variant="outline">View School Programs</Button>
-        </a>
+        <LinkButton href="mailto:brittany.snowden@kidscommons.org">Email Education Coordinator</LinkButton>
+        <LinkButton href="/education/school-programs" variant="outline">View School Programs</LinkButton>
       </div>
     </div>
   </section>
