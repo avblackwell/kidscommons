@@ -3,6 +3,8 @@
  * Zero-JS link styled as a button. Use this instead of <a><Button client:load></a>.
  * Matches the shadcn Button visual styles without shipping React to the browser.
  */
+import { cn } from "@/lib/utils"
+
 interface Props {
   href: string
   variant?: "default" | "outline" | "secondary" | "ghost"
@@ -32,7 +34,7 @@ const sizes: Record<string, string> = {
 
 <a
   href={href}
-  class:list={[base, variants[variant], sizes[size], className]}
+  class={cn(base, variants[variant], sizes[size], className)}
   {...rest}
 >
   <slot />
