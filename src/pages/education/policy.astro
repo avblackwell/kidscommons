@@ -1,0 +1,145 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+---
+
+<Layout title="Field Trip Policy | KidsCommons">
+  <PageHeader
+    title="Field Trip Policy"
+    description="Procedures and expectations for organizing and attending field trips at KidsCommons."
+    breadcrumbs={[
+      { label: "Education", href: "/education" },
+      { label: "Field Trip Policy", href: "/education/policy" },
+    ]}
+    color="blue"
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl space-y-10">
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Program Eligibility</h2>
+        <p class="mt-3 text-sm text-muted-foreground">
+          Field trips are open to school groups serving children in PreK–6th grade.
+        </p>
+        <ul class="mt-3 space-y-1 text-sm text-muted-foreground">
+          <li>Minimum group size: 20 students</li>
+          <li>Maximum group size: 100 students</li>
+          <li>Reservations are required in advance</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Reservation Process</h2>
+        <ol class="mt-3 space-y-3 text-sm text-muted-foreground list-decimal list-inside">
+          <li>
+            <span class="font-medium text-foreground">Advance Booking:</span> Field trips must be booked
+            at least four weeks in advance of the desired visit date.
+          </li>
+          <li>
+            <span class="font-medium text-foreground">Confirmation:</span> Your reservation is not confirmed
+            until you receive an official confirmation email from the Museum Educator. Please do not consider
+            your trip booked until you receive this confirmation.
+          </li>
+          <li>
+            <span class="font-medium text-foreground">Payment Options:</span>
+            <ul class="mt-1 ml-5 space-y-1 list-disc">
+              <li>By Check: An invoice will be issued after the visit and must be paid within two weeks.</li>
+              <li>By Credit Card: Payment can be made upon arrival.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Group Size & Admission</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li>Schools must include a minimum of 20 students to qualify for field trip programming. Groups with fewer than 20 participants will be charged $7 per person (group admission), which includes students, teachers, and chaperones.</li>
+          <li>Schools exceeding 100 students will be limited to museum exploration only, without a formal program.</li>
+          <li>If a group exceeds the maximum or falls below the minimum, the program will not be provided.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Chaperone Requirements</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li>A 1:5 adult-to-student ratio is required for PreK–6th grade.</li>
+          <li>Teachers are not included in the chaperone count but are required to wear an ID badge.</li>
+          <li>One-on-one aides or paraprofessionals are admitted free of charge with a valid school ID.</li>
+          <li>Additional adults beyond the required chaperone ratio will be charged general admission ($9).</li>
+          <li>All adults are required to wear name tags or school-issued ID badges for identification purposes.</li>
+          <li>Siblings are not permitted in the program room and must pay general admission if visiting the museum. Parents must be with siblings on the museum floor if in attendance.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Behavior Expectations</h2>
+        <p class="mt-3 text-sm text-muted-foreground">
+          We expect all field trip participants to support a positive and respectful learning environment:
+        </p>
+        <ul class="mt-3 space-y-1 text-sm text-muted-foreground">
+          <li>Use an indoor voice</li>
+          <li>Stay with your group</li>
+          <li>Follow museum rules and staff guidance</li>
+        </ul>
+        <p class="mt-3 text-sm text-muted-foreground">
+          Chaperones are expected to actively supervise and engage students during the visit. Teachers and
+          adults help set the tone for the day, and modeling respectful behavior enhances the experience for all.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Health & Safety Guidelines</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li>KidsCommons complies with all local and state health regulations.</li>
+          <li>Guests showing symptoms of illness or with a temperature above 100.4&deg;F must be removed from the group. The school is responsible for contacting parents or guardians for pickup.</li>
+          <li>First aid kits are available on-site, but museum staff do not administer first aid.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Liability Statement</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li>KidsCommons is not liable for injuries or damages during your visit.</li>
+          <li>The school is responsible for the conduct, care, and well-being of its students at all times.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Cancellation & No-Show Policy</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li><span class="font-medium text-foreground">Weather-related cancellations:</span> Please contact KidsCommons as soon as possible. We will work with you to reschedule at your convenience, based on our availability.</li>
+          <li><span class="font-medium text-foreground">No-shows:</span> If your group fails to attend a confirmed field trip, you will be invoiced and must pay the outstanding balance in full before booking any future visits.</li>
+          <li><span class="font-medium text-foreground">Cancellations within two weeks:</span> If you cancel your field trip within 14 days of the scheduled visit, you will still be billed in full. No refunds or credits will be issued for cancellations made within this two-week window.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-card p-6">
+        <h2 class="text-xl font-bold">Additional Information</h2>
+        <ul class="mt-3 space-y-2 text-sm text-muted-foreground">
+          <li>KidsCommons does not offer a designated lunch space. No food or drink is allowed in exhibit areas.</li>
+          <li>Field trip hours: Tuesday–Friday, 10:00 AM to 1:00 PM only.</li>
+          <li>Member discounts do not apply to field trips.</li>
+          <li>Multiple school groups may be scheduled on the same day.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border bg-gradient-to-br from-kc-blue/5 to-kc-purple/5 p-6 text-center">
+        <h2 class="text-xl font-bold">Book a Field Trip</h2>
+        <p class="mt-2 text-sm text-muted-foreground">
+          To book or learn more, contact Brittany Snowden, Museum Educator.
+        </p>
+        <div class="mt-4 flex flex-col items-center gap-2 text-sm">
+          <a href="mailto:brittany.snowden@kidscommons.org" class="text-primary hover:underline">
+            brittany.snowden@kidscommons.org
+          </a>
+          <span class="text-muted-foreground">(812) 378-3046 ext. 136</span>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-muted-foreground">
+        This policy is reviewed annually and updated as necessary. Last updated March 2025.
+      </p>
+    </div>
+  </section>
+</Layout>

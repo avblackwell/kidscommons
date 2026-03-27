@@ -52,6 +52,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: "Overview", href: "/education" },
       { label: "School Programs", href: "/education/school-programs" },
+      { label: "Field Trip Policy", href: "/education/policy" },
     ],
   },
   { label: "Parties & Rentals", href: "/parties-rentals" },
@@ -64,6 +65,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Our Team", href: "/about/team" },
       { label: "Board of Directors", href: "/about/board" },
       { label: "Annual Report", href: "/about/annual-report" },
+      { label: "Strategic Plan", href: "/about/strategic-plan" },
       { label: "Employment", href: "/about/employment" },
       { label: "Contact Us", href: "/about/contact" },
     ],
@@ -75,6 +77,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Donate", href: "/support/donate" },
       { label: "Volunteer", href: "/support/volunteer" },
       { label: "Kroger Rewards", href: "/support/kroger-rewards" },
+      { label: "Donation Request", href: "/support/donation-request" },
     ],
   },
 ]

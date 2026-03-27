@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/main.astro"
+import PageHeader from "@/components/PageHeader.astro"
+import LinkButton from "@/components/LinkButton.astro"
+---
+
+<Layout title="Donation Request | KidsCommons">
+  <PageHeader
+    title="Donation Request"
+    description="Request a donation from KidsCommons for your fundraiser or event."
+    breadcrumbs={[
+      { label: "Support", href: "/support/donate" },
+      { label: "Donation Request", href: "/support/donation-request" },
+    ]}
+    color="green"
+  />
+
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border bg-gradient-to-br from-kc-green/5 to-kc-blue/5 p-8 sm:p-12 text-center">
+        <h2 class="text-2xl font-bold">Request a Donation</h2>
+        <p class="mt-4 text-muted-foreground">
+          Are you a non-profit organization or school looking for donations for your fundraiser?
+          Fill out our request form online and if your request can be granted, you will be notified.
+        </p>
+        <div class="mt-8">
+          <LinkButton
+            href="https://forms.gle/xLp3RekHevSYcbEK6"
+            size="lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Request Form
+          </LinkButton>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
