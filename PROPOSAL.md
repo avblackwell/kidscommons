@@ -151,7 +151,6 @@ The new site is built with accessibility as a core principle, not an afterthough
 - Analytics setup
 - Newsletter service integration
 - Contact form backend integration
-- Search functionality
 
 ---
 
