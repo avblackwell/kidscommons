@@ -180,16 +180,14 @@ Once launched, the site requires significantly less maintenance than WordPress:
 
 ## Pricing
 
-| Phase | Scope | Cost |
-|-------|-------|------|
-| **Phase 1 — Launch-Ready** | Full site design & build, CMS setup, content migration, testing & QA, launch | $5,000 |
-| **Phase 2 — Post-Launch Enhancements** | Maps, analytics, event calendar, newsletter integration, search | $2,000 |
-| **Total** | | **$7,000** |
+**Total project cost: $7,000**
+
+All work described in Phase 1 and Phase 2 is included.
 
 ### Payment Terms
 
-- **50% ($3,500) due upon signing**
-- **50% ($3,500) due at launch** when the site goes live
+- **$3,500 due upon signing**
+- **$3,500 due at launch** when the site goes live
 
 ### Revisions
 
