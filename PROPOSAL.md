@@ -138,23 +138,20 @@ The new site is built with accessibility as a core principle, not an afterthough
 
 ## What's Included
 
-### Phase 1 — Launch-Ready (Current)
 - Complete site design and build across all pages listed above
 - Responsive design (mobile, tablet, desktop)
 - Accessibility compliance
 - Sanity CMS setup with all content schemas
+- Sanity CMS content population support (staff provides content; developer assists with initial upload and formatting)
 - Integration with existing ticket shop (shop.kidscommons.org)
 - SEO fundamentals (sitemap, meta tags, canonical URLs, semantic HTML)
 - Social media links (Facebook, Instagram)
-
-### Phase 2 — Post-Launch Enhancements
 - Google Maps embed on homepage and location page
-- Sanity CMS content population support (staff provides content; developer assists with initial upload and formatting)
 - Event calendar integration
 - Analytics setup
 - Newsletter service integration
-- Search functionality
 - Contact form backend integration
+- Search functionality
 
 ---
 
@@ -182,7 +179,7 @@ Once launched, the site requires significantly less maintenance than WordPress:
 
 **Total project cost: $7,000**
 
-All work described in Phase 1 and Phase 2 is included.
+All work described in the "What's Included" section is covered.
 
 ### Payment Terms
 
